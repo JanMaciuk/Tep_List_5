@@ -32,7 +32,6 @@ template <typename T> CTree<T>::CTree(CTree&& otherInstance) noexcept // move co
 {
 	root = otherInstance.root;
 	otherInstance.root = NULL;
-	cout << "Tree moved by constructor" << endl; //TODO: remove
 }
 
 template <typename T> CTree<T>::CTree() // default constructor
@@ -114,7 +113,6 @@ template <typename T> void CTree<T>::operator=(CTree&& otherInstance) noexcept /
 	// set the other tree to an empty tree by dereferencing its root pointer
 	otherInstance.root = NULL;
 
-	cout << "Tree moved" << endl; //TODO: remove
 }
 
 template <typename T> CTree<T> CTree<T>::operator+(const CTree& otherInstance) const
